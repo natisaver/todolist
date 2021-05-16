@@ -7,4 +7,10 @@ Use the package manager [npm](https://nodejs.org/en/download/) to install module
 npm i express
 npm i -g nodemon
 npm i ejs
+npm i express-validator
+```
+
+To Run:
+```bash
+nodemon app.js
 ```
