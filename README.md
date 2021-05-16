@@ -1,4 +1,4 @@
-# todolist
+# todolist 📝
 ## Installation
 cd to project directory
 Use the package manager [npm](https://nodejs.org/en/download/) to install modules.
