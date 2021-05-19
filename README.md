@@ -1,4 +1,4 @@
-# todolist 📝
+# todolist EJS📝
 ## Installation
 cd to project directory
 Use the package manager [npm](https://nodejs.org/en/download/) to install modules.
@@ -14,3 +14,5 @@ To Run:
 ```bash
 nodemon app.js
 ```
+
+currently, this app is unable to remove items. the "X" button is just for show.
