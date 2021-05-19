@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+
+    <!-- The <%= %> will output the value on html, <% %> returns no output-->
+    <h1>Its a <%= EJSINPUT %> </h1>
+    <h2> Today's Date: <%= EJSINPUT2 %> </h2>
+    <h2 style="text-decoration: underline;"> To do:</h2>
+    <ol type="1">
+        <% for (var i=0;i<ITEMARRAY.length;i++){ %>
+            <li> <%= ITEMARRAY[i].name %> | <%= ITEMARRAY[i].st %> - <%= ITEMARRAY[i].et %> <input type="checkbox"> <button onclick="myFunction(i)" id="remove">X</button> </li> 
+        <% } %>
+
+    </ol>
+
+
+
+    <h2 style="text-decoration: underline;"> Add a To do: </h2>
+    <form action="/" method="post">
+        <label for="newItem">Name Of Activity</label>
+        <input type="text" name="newItem" placeholder="Enter Task Name" required>
+        <label for="startTime">From:</label>
+        <input type="time" name="startTime" id="">
+        <label for="endTime">To:</label>
+        <input type="time" name="endTime" id="">
+        <button type="submit" required>Add</button>
+    </form>
+
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("remove").parentNode.remove();
+        }
+    </script>
+    
+</body>
+</html>
