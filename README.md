@@ -7,6 +7,7 @@ Use the package manager [npm](https://nodejs.org/en/download/) to install module
 npm i express
 npm i -g nodemon
 npm i ejs
+npm i jquery
 ```
 
 To Run:
