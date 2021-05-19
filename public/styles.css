@@ -1,0 +1,13 @@
+html {
+    background-color: #F5B7B1;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+  }
+
+input:checked + span {
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
