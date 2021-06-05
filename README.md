@@ -15,4 +15,14 @@ To Run:
 nodemon app.js
 ```
 
+To Run DB:
+```bash
+mongod
+```
+Create a new bash tab:
+```bash
+mongo
+show dbs
+```
+
 currently, this app is unable to remove items. the "X" button is just for show.
