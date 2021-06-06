@@ -23,7 +23,7 @@ mongod
 ```bash
 mongo
 show dbs
-use whateverdbnameuwant
+use dbnametoaccess
 show collections
 //some cmds
 db.collectionitems.find()
