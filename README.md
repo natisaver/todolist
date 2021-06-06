@@ -10,19 +10,24 @@ npm i ejs
 npm i mongoose
 ```
 
-To Run:
+1) To Run:
 ```bash
 nodemon app.js
 ```
 
-To Run DB:
+2) In another bash window, To Run DB:
 ```bash
 mongod
 ```
-Create a new bash tab:
+3) Another bash window:
 ```bash
 mongo
 show dbs
+use whateverdbnameuwant
+show collections
+//some cmds
+db.collectionitems.find()
+db.collectionitems.remove({copypasteidhere})
 ```
 
 currently, this app is unable to remove items. the "X" button is just for show.
