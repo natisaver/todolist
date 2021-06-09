@@ -30,4 +30,4 @@ db.collectionitems.find()
 db.collectionitems.remove({copypasteidhere})
 ```
 
-currently, this app is unable to remove items. the "X" button is just for show.
+currently, this app is unable to fully store the checklist state, intend to do so via localstorage
