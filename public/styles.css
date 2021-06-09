@@ -1,13 +1,151 @@
 html {
-    background-color: #F5B7B1;
+    background-color: white;
   }
   
   body {
     font-family: "Poppins", sans-serif;
     height: 100vh;
+    margin-left: 5%;
   }
 
-input:checked + span {
-    text-decoration: line-through;
-    text-decoration-color: red;
+  h1.time {
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    text-decoration: overline;
+  }
+
+  h2.time{
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    color: #F5B7B1;
+
+  }
+
+  .half {
+    display: inline-flex;
+
+  }
+
+  .half2 {
+    display: block;
+    grid-area: haf;
+  }
+
+  .halfie {
+    margin: 1px 50px 0 0;
+
+  }
+
+  .vl {
+    border-left: 1px solid black;
+    border-style: double;
+    height: 100px;
+    margin: 1px 50px 0 0
+  }
+
+  .timez {
+    font-size: 48px;
+    margin-top: 0px;
+  }
+
+  .inlinez {
+    display: inline;
+  }
+
+  input:checked + span {
+      text-decoration: line-through;
+      text-decoration-color: red;
+  }
+
+#container {
+  display: block;
+  /* border-style: ridge;
+  border-style: solid;
+  border-width: 0.5px; */
+}
+
+#container > * {
+  margin-bottom: 10px;
+}
+
+.label {
+  justify-self: left;
+
+}
+
+.firstrow {
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.hr{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.min {
+  grid-column: 2;
+  grid-row: 1;
+  margin-left: 5px;
+}
+
+.sec {
+  grid-column: 3;
+  grid-row: 1;
+  margin-left: 5px;
+}
+
+.secondrow {
+  text-align: center;
+}
+
+.thirdrow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.b1 {
+  display:inline-block;
+  padding:0.4em 0.8em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.15em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family: "Poppins", sans-serif;
+  font-weight:400;
+  color:#FFFFFF;
+  background-color:#c4797f;
+  box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+  text-align:center;
+  position:relative;
+  cursor: pointer;
+}
+
+.b1:active{
+  top:0.1em;
+}
+
+@media all and (max-width:30em){
+   .b1 {
+   display: block;
+   margin: 0.4em auto;
+  }
+}
+
+.b2 {
+  background-color:#0000007e!important; 
+}
+
+.b1:hover{
+  color:#DDDDDD;
+  border-color:#F5B7B1;
+  }
+
+.p1 {
+  font-size: 50px;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  color:rgb(172, 76, 76);
+  border: none;
 }

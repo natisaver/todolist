@@ -2,43 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Rise and Grind🌞</title>
     <link rel="stylesheet" href="./styles.css">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- The <%= %> will output the value on html, <% %> returns no output-->
+    <h1 class="time">Rise & Grind🌞</h1>
     <h1>Its a <%= EJSINPUT %> </h1>
-    <h2> Today's Date: <%= EJSINPUT2 %> </h2>
-    <h2 style="text-decoration: underline;"> To do:</h2>
-    <ol type="1">
-        <% for (var i=0;i<ITEMARRAY.length;i++){ %>
-            <li> <%= ITEMARRAY[i].name %> | <%= ITEMARRAY[i].st %> - <%= ITEMARRAY[i].et %> <input type="checkbox"> <button onclick="myFunction(i)" id="remove">X</button> </li> 
-        <% } %>
+    <div class="half">
+        <div class="halfie">
+            <h2 class="inlinez"> Today's Date:</h2> <h2 class="time inlinez"> <%= EJSINPUT2 %> </h2> 
+            <h2 class="time timez"> <%= EJSINPUT3 %> </h2>
+        </div>
+        <div class="vl"></div>
+        <div id="container" class="halfie">
+            <div class="firstrow">
+                <span class="hr label">Hours</span> <span class="min label">Mins</span> <span class="sec label">Secs</span>
+            </div>
+            <div class="secondrow">
+                <input id="h" name="in1" type="number" max="99" min="0" class="hours p1"> 
+                <span class="p2">:</span>  <input id="m" name="in2" class="p1" type="number"  max="60" min="0" class="minutes"> 
+                <span class="p2">:</span> <input id="s" name="in3" class="p1" type="number"  max="60" min="0" class="seconds">
+            </div>
+            <div class="thirdrow">
+                <a id="start" class="b1">Start</a> <a id="pause" class="b1">Pause</a> <a id="reset" class="b1 b2">Reset</a> 
+            </div>
+            
 
-    </ol>
+        </div>
+
+    </div>
+
+    <div class="half">
+        <div class="halfie">
+            <h2 style="text-decoration: underline;"> Add a To do: </h2>
+            <form action="/" method="post">
+                <label for="newItem">Name Of Activity</label>
+                <input type="text" name="newItem" placeholder="Enter Task Name" required autocomplete="off">
+                <label for="startTime">From:</label>
+                <input type="time" name="startTime" id="">
+                <label for="endTime">To:</label>
+                <input type="time" name="endTime" id="">
+                <button type="submit" required>Add</button>
+            </form>    
+
+        <div class="halfie">
+            <h2 style="text-decoration: underline;"> To do:</h2>
+            <form id="form1" action="/delete" method="post"></form>
+            <form id="form2" action="/check" method="post"></form>
+            <ol form="form1" type="1">
+                <!-- <% ITEMARRAY.forEach(function(item){ %>
+                    <p><input form="form2" type="checkbox" name="checkboxx" onChange="this.form.submit()" <%= EJSCHECKED %> > <span> <%= item.name %> | <%= item.st %> - <%= item.et %> <button form="form1" name="delbutton" type="submit" value=<%= item._id %> >X</button> </span> </p>
+                <% }) %> -->
+
+                <% for (var i=0;i<ITEMARRAY.length;i++){ %>
+                    <p><input type="checkbox" name="checkboxx"> <span> <%= ITEMARRAY[i].name %> | <%= ITEMARRAY[i].st %> - <%= ITEMARRAY[i].et %> <button form="form1" name="delbutton" type="submit" value=<%= ITEMARRAY[i]._id %> >X</button> </span> </p>
+                <% } %>
+
+            </ol>
+        </div>
+
+        
+        </div>
+
+
+        
 
 
 
-    <h2 style="text-decoration: underline;"> Add a To do: </h2>
-    <form action="/" method="post">
-        <label for="newItem">Name Of Activity</label>
-        <input type="text" name="newItem" placeholder="Enter Task Name" required>
-        <label for="startTime">From:</label>
-        <input type="time" name="startTime" id="">
-        <label for="endTime">To:</label>
-        <input type="time" name="endTime" id="">
-        <button type="submit" required>Add</button>
-    </form>
+
+    </div>
 
 
-    <script>
-        function myFunction() {
-          var x = document.getElementById("remove").parentNode.remove();
-        }
-    </script>
-    
+
+    <script type="text/javascript" src="timer.js"></script>
 </body>
 </html>
