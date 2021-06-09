@@ -67,6 +67,7 @@ function timerfunction(){
     m.value = 0;
     s.value = 0;
   }
+  //decrease seconds, minutes then hours
   else if( s.value!=0){
     s.value --;
   }
