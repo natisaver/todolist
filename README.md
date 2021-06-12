@@ -4,10 +4,8 @@ cd to project directory
 Use the package manager [npm](https://nodejs.org/en/download/) to install modules.
 
 ```bash
-npm i express
+npm i express ejs mongoose
 npm i -g nodemon
-npm i ejs
-npm i mongoose
 ```
 
 1) To Run:
